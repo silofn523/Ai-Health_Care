@@ -1,0 +1,20 @@
+services:
+  POSTGRES_DB:
+    image: postgres
+    restart: always
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    expose:
+      - 5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: hhh
+  
+  app:
+    image: silofn/hg 
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    ports:
+      - 3000:3000
