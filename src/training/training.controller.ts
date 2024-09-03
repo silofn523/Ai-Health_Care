@@ -17,7 +17,7 @@ import { UserService } from 'src/user/user.service'
 import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger'
 import { Request } from 'express'
 import { Training } from './entities/training.entity'
-import { AuthGuard } from 'src/auth/dto/guard/auth.guard'
+import { AuthGuard } from 'src/auth/guard/auth.guard'
 
 @ApiTags('운동 관리 솔루션')
 @Controller('training')

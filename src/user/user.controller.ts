@@ -16,7 +16,7 @@ import { UpdateUserDto } from './dto/update-user.dto'
 import { ApiBearerAuth, ApiBody, ApiOperation, ApiTags } from '@nestjs/swagger'
 import { User } from './entities/user.entity'
 import { SexEnum } from './enum/role.enum'
-import { AuthGuard } from 'src/auth/dto/guard/auth.guard'
+import { AuthGuard } from 'src/auth/guard/auth.guard'
 
 @ApiTags('User("유저CRUD")')
 @Controller('user')

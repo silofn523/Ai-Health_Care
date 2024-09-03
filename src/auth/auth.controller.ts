@@ -12,7 +12,7 @@ import { AuthService } from './auth.service'
 import { ApiBearerAuth, ApiBody, ApiOperation, ApiTags } from '@nestjs/swagger'
 import { LoginDto } from './dto/Login.dto'
 import { Request } from 'express'
-import { AuthGuard } from './dto/guard/auth.guard'
+import { AuthGuard } from './guard/auth.guard'
 
 @ApiTags('Auth("로그인 & 인증관리")')
 @Controller('auth')

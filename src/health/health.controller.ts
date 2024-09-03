@@ -15,7 +15,7 @@ import { Request } from 'express'
 import { JwtService } from '@nestjs/jwt'
 import { Health } from './entities/health.entity'
 import { UserService } from 'src/user/user.service'
-import { AuthGuard } from 'src/auth/dto/guard/auth.guard'
+import { AuthGuard } from 'src/auth/guard/auth.guard'
 
 @ApiTags('식단 관리 솔루션')
 @Controller('health')
@@ -124,7 +124,7 @@ export class HealthController {
     description: '삭제'
   })
   @Delete(':id')
-  public async emove(@Param('id') id: string): Promise<{ success: boolean }> {
+  public async remove(@Param('id') id: string): Promise<{ success: boolean }> {
     const health = this.healthService.remove(+id)
 
     if (!health) {
